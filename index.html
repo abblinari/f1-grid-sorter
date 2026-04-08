@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F1 Grid Sorter 2026</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <section id="start-screen">
+        <header class="main-header">
+            <h1>F1 Grid Sorter 2026</h1>
+            <p>Choose your favourite and create your own peloton ranking!</p>
+            <button class="start-btn" onclick="startGame()">Start Ranking</button>
+        </header>
+    </section>
+
+    <section id="rules-screen" style="display: none;">
+        <div class="rules-container">
+            <h1>BATTLE RULES</h1>
+            <ul>
+                <li><span class="red-bullet">01</span> Pick your favorite driver in each pair.</li>
+                <li><span class="red-bullet">02</span> Use "Skip" if you can't decide.</li>
+                <li><span class="red-bullet">03</span> Hope you enjoy it! Good luck!</li>
+            </ul>
+            <button class="start-btn" onclick="startActualGame()">I'M READY</button>
+        </div>
+    </section>
+
+    <section id="game-screen" style="display: none;">
+        <main id="game-container">
+            <div id="progress-info">
+              Progress: <span id="progress-percent">0</span>% Complete
+            </div>
+            <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+            </div>
+
+            <div class="cards-battle">
+                <div id="left-card" class="pilot-card" onclick="pick('left')">
+                    <img src="images/placeholder.png" alt="Pilot" id="left-img">
+                    <div class="pilot-info">
+                        <h2 id="left-name">Loading...</h2>
+                        <span class="pilot-number" id="left-number">00</span>
+                    </div>
+                    <div class="pilot-signature">
+                        <span id="left-signature">Team Name</span>
+                    </div>
+                </div>
+
+                <div id="right-card" class="pilot-card" onclick="pick('right')">
+                    <img src="images/placeholder.png" alt="Pilot" id="right-img">            
+                    <div class="pilot-info">
+                        <h2 id="right-name">Loading...</h2>
+                        <span class="pilot-number" id="right-number">00</span>
+                    </div>
+                    <div class="pilot-signature">
+                        <span id="right-signature">Team Name</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="skip-btn" onclick="pick('tie')">Skip Battle</button>
+            </div>  
+        </main>
+    </section>
+
+    <section id="results-screen" style="display: none;">
+        <header class="main-header">
+            <h2>Your final peloton</h2>
+            <div id="ranking-table"></div>
+            <button id="share-btn" onclick="copyResults()">Copy Results</button>
+            <button class="skip-btn" onclick="location.reload()">Try again</button>
+        </header>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
