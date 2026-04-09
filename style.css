@@ -345,7 +345,11 @@ h1 {
     #rules-screen, #start-screen {
         width: 100% !important;
         max-width: 100% !important;
+    }
+
+    section[style*="display: flex"] {
         display: flex !important;
+        flex-direction: column !important;
     }
     
     h1 {
