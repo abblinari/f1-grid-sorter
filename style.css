@@ -14,9 +14,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 40px;
+<<<<<<< HEAD
+    border: 15px solid #e10600; 
+    overflow-x: hidden;
+    overflow-y: auto;
+=======
     border: 15px solid #e10600;
     overflow-x: hidden; 
     overflow-y: auto; 
+>>>>>>> 29c572c4109960d47adad6c6b25676cd1a7cba73
 }
 
 .main-header {
@@ -307,8 +313,8 @@ h1 {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Мобільна версія */
 @media (max-width: 768px) {
+
     .cards-battle {
         display: flex; 
         flex-direction: column; 
@@ -316,36 +322,55 @@ h1 {
         width: 100%;
         gap: 15px; 
     }
+
     .pilot-card {
         padding: 10px; 
         width: 90%; 
         max-width: 320px;
-    
-        flex: 0 0 auto;
-        height: auto;
-    }
-    h1 { font-size: 2rem; }
-    body { border-width: 5px; padding: 15px; }
-    section {
-        flex-direction: column !important; 
-        align-items: center;
-        text-align: center;
-        padding: 20px 10px;
-        width: 100%;
+        
+        
+        flex: 0 0 auto; 
+        height: auto; 
     }
 
-    #rules-screen {
-        width: 100%;
-        max-width: 100%;
+    body {
+        border-width: 5px !important; 
+        padding: 10px !important;
+        overflow-x: hidden;
+    }
+
+    section {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 20px 10px !important;
+    }
+
+    #rules-screen, #start-screen {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+    }
+    
+    h1 {
+        font-size: 1.8rem !important; 
+        width: 90% !important; 
+        margin: 0 auto 15px auto !important;
     }
 
     .rules-list {
-        text-align: left;
-        width: 100%;
+        text-align: left !important;
+        width: 100% !important;
+        max-width: 320px !important; 
+        margin: 0 auto 20px auto !important;
     }
+
     button {
-        width: 80%;
-        max-width: 300px;
-        font-size: 1.2rem;
+        width: 90% !important;
+        max-width: 300px !important;
+        font-size: 1.2rem !important;
+        margin: 0 auto !important; 
     }
 }
