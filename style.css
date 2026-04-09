@@ -14,7 +14,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 40px;
-    border: 15px solid #e10600; 
+    border: 15px solid #e10600;
+    overflow-x: hidden; 
+    overflow-y: auto; 
 }
 
 .main-header {
@@ -173,16 +175,6 @@ h1 {
     transition: width 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-/* Мобільна версія */
-@media (max-width: 768px) {
-    .cards-battle {
-        flex-direction: column;
-        align-items: center;
-    }
-    h1 { font-size: 2rem; }
-    body { border-width: 5px; padding: 15px; }
-}
-
 .start-btn {
     margin-top: 30px;
     padding: 20px 80px;
@@ -313,4 +305,47 @@ h1 {
     background: white;
     color: #111;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+    .cards-battle {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+        gap: 15px; 
+    }
+    .pilot-card {
+        padding: 10px; 
+        width: 90%; 
+        max-width: 320px;
+    
+        flex: 0 0 auto;
+        height: auto;
+    }
+    h1 { font-size: 2rem; }
+    body { border-width: 5px; padding: 15px; }
+    section {
+        flex-direction: column !important; 
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        width: 100%;
+    }
+
+    #rules-screen {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .rules-list {
+        text-align: left;
+        width: 100%;
+    }
+    button {
+        width: 80%;
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
 }
