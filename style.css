@@ -14,15 +14,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 40px;
-<<<<<<< HEAD
     border: 15px solid #e10600; 
     overflow-x: hidden;
     overflow-y: auto;
-=======
-    border: 15px solid #e10600;
-    overflow-x: hidden; 
-    overflow-y: auto; 
->>>>>>> 29c572c4109960d47adad6c6b25676cd1a7cba73
 }
 
 .main-header {
