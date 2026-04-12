@@ -365,10 +365,27 @@ h1 {
         margin: 0 auto 20px auto !important;
     }
 
-    button {
-        width: 90% !important;
-        max-width: 300px !important;
-        font-size: 1.2rem !important;
-        margin: 0 auto !important; 
+    button, .start-btn {
+    width: 90% !important;
+    max-width: 300px !important;
+    padding: 15px 10px !important; 
+    font-size: 1.2rem !important;
+    margin: 20px auto !important; 
+    display: block !important; 
     }
+
+    .result-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px !important;
+    gap: 10px;
+    min-height: 70px; 
+    }
+
+    .result-item span {
+    font-size: 0.9rem !important;
+    line-height: 1.2;
+    }
+    
 }

@@ -195,19 +195,19 @@ function finishGame() {
         row.style.background = "rgba(255, 255, 255, 0.05)";
         row.style.borderRadius = "5px";
 
-        row.innerHTML = `
-            <div class="position-box" style="min-width: 40px; font-family: 'Orbitron', sans-serif;">
-                ${positionDisplay}
-            </div>
-            <div style="flex-grow: 1; font-family: 'Orbitron', sans-serif;">
-                <span style="font-size: 1.1em; color: #fff; text-transform: uppercase; font-weight: bold;">
-                    ${driver.name}
-                </span>
-                <span style="color: #888; font-size: 0.8em; margin-left: 10px; letter-spacing: 1px;">
-                    // ${driver.team}
-                </span>
-            </div>
-        `;
+       row.innerHTML = `
+           <div class="position-box" style="min-width: 50px; font-family: 'Orbitron', sans-serif; font-size: 1.2rem; text-align: center;">
+        ${positionDisplay}
+           </div>
+           <div class="driver-info-container" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; overflow: hidden;">
+           <span style="font-size: 0.9rem; color: #fff; text-transform: uppercase; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            ${driver.name}
+            </span>
+            <span style="color: #888; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;">
+            ${driver.team}
+            </span>
+    </div>
+`;
 
         rankingTable.appendChild(row);
     });
